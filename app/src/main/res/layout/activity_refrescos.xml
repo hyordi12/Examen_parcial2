@@ -1,6 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/refres_fndo">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/buttonsLayout"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido, " />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Refresco1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="coca" />
+
+            <TextView
+                android:id="@+id/Refresco1Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$20"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="201dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/coca" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Refresco2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pepsi 2" />
+
+            <TextView
+                android:id="@+id/Refresco2Price"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="$25"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="216dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/pepsi" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/Refresco3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mirinda" />
+
+            <TextView
+                android:id="@+id/Refresco3Price"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="$30"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="236dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/mirinda" />
+
+
+        <TextView
+            android:id="@+id/textViewPrecioTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio total de refrescos: $0"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/ordeSummaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Siguiente" />
+
+
+        <Button
+            android:id="@+id/pizzasButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Pizzas" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

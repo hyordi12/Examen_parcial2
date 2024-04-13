@@ -1,6 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/pizza_fondo">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@+id/buttonsLayout"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/textViewUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFFFF" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Pizza1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hawaiana" />
+
+                <TextView
+                    android:id="@+id/Pizza1Price"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:text="150"
+                    android:textColor="#FFFFFFFF"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewPizza1"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/hawaiana" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Pizza2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pastor" />
+
+                <TextView
+                    android:id="@+id/Pizza2Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textColor="#FFFFFFFF"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewPizza2"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/pastor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Pizza3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mexicana" />
+
+                <TextView
+                    android:id="@+id/Pizza3Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="250"
+                    android:textColor="#FFFFFFFF"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewPizza3"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:src="@drawable/mexicana" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/orderSummaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/NextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:text="siguiente" />
+
+
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="16dp"
+            android:text="pagar" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
